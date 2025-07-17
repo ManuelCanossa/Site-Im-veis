@@ -3,7 +3,7 @@ h1 {
 }
 
 h2 {
-    color: brown;
+    color: bron;
 
 }
 
@@ -58,15 +58,17 @@ body {
     position: absolute;
     top: 30vh;
     left: 5vw;
-    width: 60%
+    width: 90%
 }
 
 header>h1,
-header>h2 {
-    color: beige;
+header>h2,
+#headerJunteseaNos h1 {
+    color: #FFFFFF;
     text-shadow: 3px 3px 5px black;
     text-align: center;
 }
+
 
 header>h1 {
     font-size: 58px;
@@ -76,17 +78,76 @@ header>h2 {
     font-size: 42px;
 }
 
-header>h3 {
-    color: #2c323c;
-    text-align: center;
-    font-size: 58px;
+#headerVender>h1 {
+    color: rgb(65, 65, 65);
+    text-shadow: none;
 }
 
-header>h4 {
-    text-align: justify;
+
+#headerVender>h2 {
+    color: #2c323c;
+    text-align: left;
     margin-top: 50px;
     font-size: 30px;
     position: absolute;
+    text-shadow: none;
+}
+
+#headerVender>h3 {
+    color: #2c323c;
+    text-align: justify;
+    margin-top: 230px;
+    font-size: 20px;
+    position: absolute;
+    text-shadow: none;
+}
+
+#headerJunteseaNos {
+    background-image: url("../imagens/Pessoas a trabalhar.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#headerJunteseaNos>h3 {
+    color: #F5F5F5;
+    margin-top: 50px;
+    text-align: left;
+}
+
+#headerJunteseaNos .mainText {
+    width: 80%;
+    margin: auto;
+}
+
+
+#headerJunteseaNos .mainText h1 {
+    padding: 2rem;
+}
+
+#headerJunteseaNos .mainText h2 {
+    color: #FFFFFF;
+    margin-top: 50px;
+    font-size: 50px;
+    width: 60%;
+    text-shadow: 2px 2px 5px black;
+}
+
+#headerJunteseaNos .mainText h3 {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(12, 12, 12, 0.6);
+    margin-top: 30px;
+}
+
+#headerJunteseaNos .mainText p {
+    color: #EEEEEE;
+    text-shadow: 1px 1px 2px rgba(157, 107, 107, 0.6);
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#headerJunteseaNos .mainText p:last-child {
+    padding-bottom: 5rem;
 }
 
 header .search {
@@ -101,6 +162,11 @@ header .search {
 #carouselExampleAutoplaying img {
     object-fit: cover;
     max-height: 80vh;
+}
+
+#BackgroundVender {
+    height: 80vh;
+    object-fit: cover;
 }
 
 .grid {
