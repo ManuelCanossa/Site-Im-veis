@@ -1,14 +1,34 @@
-h1 {
-    color: brown;
-}
-
-h2 {
-    color: bron;
-
-}
-
 body {
     margin: 0%;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+}
+
+.hamburguer {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.hamburguer div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px;
 }
 
 .menu {
@@ -31,7 +51,7 @@ body {
     justify-content: space-around;
     margin: 0%;
     width: 90%;
-
+    transition: transform 0.3s ease;
 }
 
 .menu ul li {
@@ -54,13 +74,6 @@ body {
     width: 60%;
 }
 
-#headerVender {
-    position: absolute;
-    top: 30vh;
-    left: 5vw;
-    width: 90%
-}
-
 header>h1,
 header>h2,
 #headerJunteseaNos h1 {
@@ -68,7 +81,6 @@ header>h2,
     text-shadow: 3px 3px 5px black;
     text-align: center;
 }
-
 
 header>h1 {
     font-size: 58px;
@@ -78,27 +90,50 @@ header>h2 {
     font-size: 42px;
 }
 
+#mainVender {
+    background-image: url("../imagens/background_image.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    min-height: 80vh;
+}
+
+#mainSobreNos {
+    background-image: url("../imagens/Background_sobrenos.png");
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    min-height: 80vh;
+}
+
+#headerVender {
+    height: fit-content;
+    width: 80%;
+    margin: auto;
+}
+
 #headerVender>h1 {
     color: rgb(65, 65, 65);
     text-shadow: none;
+    padding-top: 4rem;
 }
 
 
 #headerVender>h2 {
     color: #2c323c;
     text-align: left;
-    margin-top: 50px;
+    margin-top: 2rem;
     font-size: 30px;
-    position: absolute;
     text-shadow: none;
 }
 
 #headerVender>h3 {
     color: #2c323c;
     text-align: justify;
-    margin-top: 230px;
+    margin-top: 2rem;
     font-size: 20px;
-    position: absolute;
     text-shadow: none;
 }
 
@@ -146,6 +181,14 @@ header>h2 {
     font-size: 20px;
 }
 
+#headerSobreNos {
+    color: #EEEEEE;
+    text-shadow: 1px 1px 2px rgba(157, 107, 107, 0.6);
+    margin-top: 10px;
+    font-size: 20px;
+
+}
+
 #headerJunteseaNos .mainText p:last-child {
     padding-bottom: 5rem;
 }
@@ -162,11 +205,6 @@ header .search {
 #carouselExampleAutoplaying img {
     object-fit: cover;
     max-height: 80vh;
-}
-
-#BackgroundVender {
-    height: 80vh;
-    object-fit: cover;
 }
 
 .grid {
@@ -206,4 +244,69 @@ header .search {
 .card-text {
     font-size: 0.95rem;
     color: #555;
+}
+
+@media (max-width: 750px) {
+    .menu {
+        justify-content: space-between;
+        padding: 2rem;
+    }
+
+    .menu .hamburguer {
+        display: flex;
+    }
+
+    .menu .nav-links {
+        position: fixed;
+        top: 0;
+        right: -220px;
+        height: 100vh;
+        width: 200px;
+        background-color: white;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 20px;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease-in-out;
+        z-index: 99;
+        display: flex;
+    }
+
+    .menu .nav-links li {
+        margin-top: 2rem;
+    }
+
+    .menu .nav-links li:first-child {
+        margin-top: 10rem;
+    }
+
+    .menu .nav-links.active {
+        right: 0;
+    }
+
+    .menu .nav-links li {
+        margin: 15px 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .carousel img {
+        height: 200vh;
+    }
+}
+
+@media (max-width: 768px) {
+    #headerIndex h1 {
+        font-size: 2rem;
+    }
+
+    #headerIndex h2 {
+        font-size: 1.2rem;
+    }
+}
+
+.background-text {
+    display: none;
 }
